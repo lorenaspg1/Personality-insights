@@ -1,0 +1,7 @@
+curl -X POST -u "apikey:9vI2Ybs6pcP-jUN9hSnEIlONIjedRZnMu29itLHuM7m5" \
+--header "Content-Type: text/plain;charset=utf-8" \
+--header "Accept: text/csv" \
+--data-binary @/Users/lorenaspg1/profile.txt \
+--output profile.csv \
+"https://api.eu-gb.personality-insights.watson.cloud.ibm.com/instances/cf261b8b-1894-4e9c-ad76-5ecfb678171f/v3/profile?version=2017-10-13&consumption_preferences=true&raw_scores=true&csv_headers=true"
+
