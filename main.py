@@ -24,25 +24,12 @@ with open('/Users/lorenaspg1/profile.txt') as profile_txt:
         csv_headers=True,
         consumption_preferences=True,
     ).get_result()
-#print(json.dumps(profile, indent=2))
-print("test")
-print(type(profile))
-print(profile.content)
+
 responseCsv = profile.content
 
 Path('./myCSV.csv').touch()
 
-#csvProcesado = csv.reader(responseCsv)
-#print('csvProcesado: ')
-#print(csvProcesado)
-
 myFile = open('./myCSV.csv', 'w')
 with myFile:
-    writer = csv.writer(myFile)
-
-print('written')
-
-
-#with open('./myCSV.csv') as File:
- #   writer = csv.writer(File)
+    myFile.write(responseCsv.decode())
 
